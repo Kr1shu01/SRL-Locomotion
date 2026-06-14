@@ -9,7 +9,7 @@ using System.IO;
 using System;
 using System.Collections.Specialized;
 
-public class slipGo2Agent : Agent
+public class Go2Agent : Agent
 {
     float[] uff = new float[12] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
     float[] contact = new float[4] { 0, 0, 0, 0 };
