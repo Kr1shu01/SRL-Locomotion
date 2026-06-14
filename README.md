@@ -43,7 +43,7 @@ SRL-Locomotion
 ├── mujoco/
 │   └── sim2sim_mujoco.py
 │
-└── videos/
+└── media/
 ```
 
 ---
