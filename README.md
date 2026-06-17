@@ -1,4 +1,6 @@
-# SRL: Combining SLIP Model and Rei[![Paper](https://img.shields.io/badge/Paper-arXiv-orange)](#)nforcement [![Paper](https://img.shields.io/badge/Paper-arXiv-orange)](#)
+# SRL: Combining SLIP Model and Reinforcement
+
+# [![Paper](https://img.shields.io/badge/Paper-arXiv-orange)](#)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](#)
 
