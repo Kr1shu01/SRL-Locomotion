@@ -15,7 +15,7 @@ Official code release accompanying the paper:
 </p>
 <p align="center">
   <em>
-  Figure 1. Overview of the SRL control framework for robot jumping tasks, integrating the SLIP model, RL, and simulation environment. SRL combines the physically grounded motion dynamics of the SLIP model with the adaptability of RL to optimize jumping performance in complex environments such as flat ground with varying disturbances, stairs, and boxes.
+  Overview of the SRL control framework for robot jumping tasks, integrating the SLIP model, RL, and simulation environment. SRL combines the physically grounded motion dynamics of the SLIP model with the adaptability of RL to optimize jumping performance in complex environments such as flat ground with varying disturbances, stairs, and boxes.
   </em>
 </p>
 
