@@ -4,9 +4,9 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](#)
 
-> arXiv submission under review. The arXiv identifier will be updated upon announcement.
->
-> Official code release accompanying the paper: **SRL: Combining SLIP Model and Reinforcement Learning for Agile Robotic Jumping**
+【arXiv submission under review. The arXiv identifier will be updated upon announcement.】
+
+Official implementation of the SRL framework for agile jumping control of legged robots.
 
 <p align="center">
   <img src="media/frame.png" width="1000">
