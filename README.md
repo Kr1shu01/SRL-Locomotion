@@ -1,5 +1,3 @@
-# SRL-Locomotion
-
 # SRL: Combining SLIP Model and Reinforcement Learning for Agile Robotic Jumping
 
 [![Paper](https://img.shields.io/badge/Paper-RAS-red)](https://chatgpt.com/c/6a31ec1c-3744-83ee-b863-e654f198497c)
@@ -15,9 +13,10 @@ Official code release accompanying the paper:
 </p>
 <p align="center">
   <em>
-  Overview of the SRL control framework for robot jumping tasks, integrating the SLIP model, RL, and simulation environment. SRL combines the physically grounded motion dynamics of the SLIP model with the adaptability of RL to optimize jumping performance in complex environments such as flat ground with varying disturbances, stairs, and boxes.
+Overview of the SRL control framework for robot jumping tasks, integrating the SLIP model, RL, and simulation environment. SRL combines the physically grounded motion dynamics of the SLIP model with the adaptability of RL to optimize jumping performance in complex environments such as flat ground with varying disturbances, stairs, and boxes.
   </em>
 </p>
+
 
 
 ------
