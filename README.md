@@ -1,8 +1,8 @@
 # SRL: Combining SLIP Model and Reinforcement
 
-[![Paper](https://img.shields.io/badge/Paper-arXiv-orange)](https://chatgpt.com/c/6a320808-0540-83e8-aaf9-b31b820d6c8b#)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://chatgpt.com/c/LICENSE)
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://chatgpt.com/c/6a320808-0540-83e8-aaf9-b31b820d6c8b#)
+[![Paper](https://img.shields.io/badge/Paper-arXiv-orange)](#)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](#)
 
 Official code release accompanying the paper:
 
