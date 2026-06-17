@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.IO;
 using System;
 
-public class Go2Step : Agent
+public class Go2Box : Agent
 {
     float[] uff = new float[12] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
     float[] contact = new float[4] { 0, 0, 0, 0 };

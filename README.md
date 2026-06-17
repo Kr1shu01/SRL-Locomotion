@@ -1,44 +1,91 @@
 # SRL-Locomotion
 
-Code release accompanying the paper:
+# SRL: Combining SLIP Model and Reinforcement Learning for Agile Robotic Jumping
+
+[![Paper](https://img.shields.io/badge/Paper-RAS-red)](https://chatgpt.com/c/6a31ec1c-3744-83ee-b863-e654f198497c)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://chatgpt.com/c/LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://chatgpt.com/c/6a31ec1c-3744-83ee-b863-e654f198497c)
+
+Official code release accompanying the paper:
 
 **SRL: Combining SLIP Model and Reinforcement Learning for Agile Robotic Jumping**
 
 <p align="center">
   <img src="media/frame.png" width="1000">
 </p>
-
 <p align="center">
   <em>
-  Figure 1. Overview of the proposed SRL framework. The framework integrates a SLIP-based motion planner, a reinforcement learning controller, and an adaptive fusion module to achieve agile and robust jumping behaviors on both bipedal and quadrupedal robots.
+  Figure 1. Overview of the SRL control framework for robot jumping tasks, integrating the SLIP model, RL, and simulation environment. SRL combines the physically grounded motion dynamics of the SLIP model with the adaptability of RL to optimize jumping performance in complex environments such as flat ground with varying disturbances, stairs, and boxes.
   </em>
 </p>
+------
 
----
+# 📑 Table of Contents
 
-## Overview
+- Overview
+- Highlights
+- Repository Structure
+- Installation
+- Quick Start
+- Training
+- Sim-to-Sim Deployment
+- Demonstration Videos
+- Main Contributions
+- Notes
+- Citation
+- License
+- Acknowledgements
 
-This repository provides the core implementation of the proposed **SLIP-guided Reinforcement Learning (SRL)** framework for agile legged robot jumping.
+------
 
-SRL combines the physical priors of the Spring-Loaded Inverted Pendulum (SLIP) model with reinforcement learning to improve learning efficiency, robustness, and adaptability in dynamic jumping tasks.
+# 📖 Overview
 
-The framework integrates:
+SRL is a physics-guided reinforcement learning framework designed for agile robotic jumping.
+
+Unlike purely model-based or purely learning-based methods, SRL combines:
 
 - SLIP-based feedforward motion generation
-- Reinforcement learning-based feedback control
+- RL-based feedback control
 - Adaptive feedforward-feedback action fusion
-- Curriculum learning strategies
-- Staged reward shaping
-- Sim-to-sim transfer and deployment
+- Curriculum learning
+- Sim-to-sim transfer
 
-The released code includes the key algorithmic components and experimental assets used in our work, providing a reference implementation of the SRL framework.
+to achieve robust and efficient jumping performance.
 
----
+The framework has been validated on both:
 
-## Repository Structure
+- Unitree Go2 quadruped robot
+- X02-lite biped robot
+
+across multiple jumping tasks and terrain conditions.
+
+------
+
+# ✨ Highlights
+
+### Physics-Guided Learning
+
+The SLIP model provides physically meaningful motion priors that significantly improve learning efficiency.
+
+### Adaptive Control Fusion
+
+Feedforward SLIP commands and RL feedback actions are adaptively fused to improve robustness under disturbances.
+
+### Cross-Morphology Validation
+
+The same SRL framework is validated on both quadrupedal and bipedal robots.
+
+### Sim-to-Sim Transfer
+
+Policies trained in Isaac Gym can be directly deployed in MuJoCo for transfer validation.
+
+------
+
+# 📂 Repository Structure
 
 ```text
 SRL-Locomotion
+│
 ├── unity/
 │   ├── prefabs/
 │   ├── urdf/
@@ -49,117 +96,107 @@ SRL-Locomotion
 │
 ├── isaacgym/
 │   ├── envs/
+│   ├── configs/
 │   └── scripts/
 │
 ├── mujoco/
 │   └── sim2sim_mujoco.py
 │
-└── media/
-    ├── frame.png
-    ├── Go2_F.mp4
-    ├── Go2_R.mp4
-    ├── Go2_Step.mp4
-    ├── SRL.mp4
-    ├── X02_F.mp4
-    └── X02_R.mp4
+├── media/
+│   ├── frame.png
+│   ├── Go2_F.mp4
+│   ├── Go2_R.mp4
+│   ├── Go2_Step.mp4
+│   ├── SRL.mp4
+│   ├── X02_F.mp4
+│   └── X02_R.mp4
+│
+└── README.md
 ```
 
----
+------
 
-## Included Components
+# 🎮 Unity Visualization and Deployment
 
-### Unity
+The repository includes a Unity-based environment used for robot simulation, visualization, and policy deployment.
 
-Contains robot assets, URDF models, prefabs, configuration files, and controller implementations used for locomotion and jumping experiments.
+The Unity project contains robot assets, URDF models, prefabs, controller implementations, and configuration files for the supported platforms, including the Unitree Go2 quadruped robot and the X02-lite biped robot.
 
-**Supported robot platforms**
-
-- Unitree Go2 quadruped robot
-- X02-lite biped robot
-
-**Key files**
+Key components include:
 
 - `Go2Agent.cs` – Go2 jumping controller
-- `Go2Step.cs` – Go2 stepping controller
+- `Go2Box.cs` – Go2 box-jumping controller
 - `X02Agent.cs` – X02 jumping controller
 - `configuration.yaml` – controller configuration
 
-### Isaac Gym
+For Unity environment setup and deployment workflow, users may refer to the Unity-RL-Playground project:
 
-Contains task environments and training-related scripts implementing the SRL framework.
+https://github.com/loongOpen/Unity-RL-Playground
 
-The released code focuses on the key modifications beyond standard Isaac Gym training pipelines, including:
+The provided Unity assets serve as a visualization and deployment platform for evaluating the locomotion and jumping behaviors generated by the proposed SRL framework.
 
-- SRL-specific environment design
-- Reward shaping mechanisms
-- SLIP-guided policy training
-- Task-specific controller integration
+# 🛠 Installation and Usage
 
-These components contain the main algorithmic contributions of the proposed method.
+The SRL training framework is built upon the open-source Humanoid-Gym ecosystem. Users should first install the required dependencies by following the official Humanoid-Gym setup instructions:
 
-### MuJoCo
+https://github.com/roboterax/humanoid-gym
 
-Provides sim-to-sim deployment scripts used for policy validation and transfer experiments.
+After completing the installation, the SRL modules provided in this repository can be integrated into the corresponding training framework. The released code includes the core components of the proposed method, including SLIP-guided motion generation, adaptive feedforward-feedback action fusion, curriculum learning strategies, task-specific jumping environments, and sim-to-sim deployment scripts. These modules constitute the main algorithmic contributions reported in the paper.
 
-**Included file**
+For complete training infrastructure and PPO implementation details, users are encouraged to build upon the original Humanoid-Gym and RSL-RL frameworks while incorporating the released SRL components.
 
-- `sim2sim_mujoco.py`
+------
 
-This module demonstrates the deployment pipeline used for sim-to-sim transfer experiments reported in the paper.
+# 🔄 Sim-to-Sim Deployment
 
----
+To further evaluate the generalization capability of the proposed SRL framework, we provide the MuJoCo deployment script used in the sim-to-sim experiments reported in the paper.
 
-## Demonstration Videos
+The script transfers policies trained in Isaac Gym to MuJoCo for validation under an independent physics engine.
 
-The `media/` directory contains representative demonstrations of the proposed SRL framework.
+```bash
+python mujoco/sim2sim_mujoco.py
+```
 
-### Quadruped (Go2)
+------
 
-- `Go2_F.mp4` — Fixed-distance jumping
-- `Go2_R.mp4` — Random-distance jumping
-- `Go2_Step.mp4` — Stepping and locomotion behavior
+# 🎥 Demonstration Videos
 
-### Biped (X02-lite)
+## Quadruped (Go2)
 
-- `X02_F.mp4` — Fixed-distance jumping
-- `X02_R.mp4` — Random-distance jumping
+- Go2_F.mp4 — Fixed-distance jumping
+- Go2_R.mp4 — Random-distance jumping
+- Go2_B.mp4 — Box-jumping
 
-### Framework Demonstration
+## Biped (X02-lite)
 
-- `SRL.mp4` — Overview of the SRL framework and experimental results
+- X02_F.mp4 — Fixed-distance jumping
+- X02_R.mp4 — Random-distance jumping
 
----
+## Framework Overview
 
-## Main Contributions
+- SRL.mp4 — Overview and experimental demonstrations
 
-The proposed SRL framework combines:
+------
 
-- Physics-inspired SLIP motion planning
-- Reinforcement learning-based feedback control
-- Feedforward-feedback action fusion
-- Curriculum learning strategies
-- Staged reward shaping
-- Sim-to-sim transfer capability
+# 📝 Notes
 
-Compared with purely model-based or purely learning-based approaches, SRL leverages both physical priors and adaptive policy learning to achieve robust and agile jumping behaviors.
+This repository releases the core implementation and representative experimental assets used in the paper.
 
-The framework has been validated on both bipedal and quadrupedal robot platforms across multiple jumping tasks.
+The repository is intended as a reference implementation.
 
----
+Some platform-specific infrastructure is not included:
 
-## Notes
+- Hardware deployment interfaces
+- Robot communication middleware
+- Internal training infrastructure
+- Pretrained models
+- Third-party proprietary assets
 
-This repository releases the core implementation and experimental assets associated with the paper.
+For complete implementation details, please refer to the accompanying paper.
 
-Some platform-specific components, hardware interfaces, training infrastructure, pretrained models, and third-party dependencies are not included in this release.
+------
 
-Therefore, this repository should be regarded as a **reference implementation** of the SRL framework rather than a complete reproduction package.
-
-Researchers interested in reproducing the method are encouraged to refer to both the released source code and the accompanying paper for additional implementation details.
-
----
-
-## Citation
+# 📄 Citation
 
 If you find this work useful in your research, please cite:
 
@@ -172,18 +209,25 @@ If you find this work useful in your research, please cite:
 }
 ```
 
----
+------
 
-## License
+# 📜 License
 
 This project is released under the MIT License.
 
-See the `LICENSE` file for details.
+See LICENSE for details.
 
----
+------
 
-## Acknowledgements
+# 🙏 Acknowledgements
 
-This work was conducted at Shanghai University and focuses on bio-inspired locomotion, reinforcement learning, and agile motion control for legged robots.
+This work was conducted at Shanghai University.
 
-We thank the open-source robotics community for making legged locomotion research more accessible and reproducible.
+The implementation builds upon several excellent open-source projects, including:
+
+- Humanoid-gym
+- RSL-RL
+- MuJoCo
+- Unity Robotics
+
+We sincerely thank the open-source robotics community for making legged locomotion research more accessible and reproducible.
