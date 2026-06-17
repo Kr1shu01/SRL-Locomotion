@@ -1,8 +1,6 @@
-# SRL: Combining SLIP Model and Reinforcement Learning for Agile Robotic Jumping
-
-[![Paper](https://img.shields.io/badge/Paper-RAS-red)](https://chatgpt.com/c/6a31ec1c-3744-83ee-b863-e654f198497c)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://chatgpt.com/c/LICENSE)
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://chatgpt.com/c/6a31ec1c-3744-83ee-b863-e654f198497c)
+# SRL: Combining SLIP Model and Rei[![Paper](https://img.shields.io/badge/Paper-arXiv-orange)](#)nforcement [![Paper](https://img.shields.io/badge/Paper-arXiv-orange)](#)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](#)
 
 Official code release accompanying the paper:
 
