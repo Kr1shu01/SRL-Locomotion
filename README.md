@@ -4,8 +4,6 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://chatgpt.com/c/LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://chatgpt.com/c/6a333a3c-46cc-83ee-a2c8-a432c5aa0b2e#)
 
-📄 **Paper:** https://arxiv.org/abs/2606.18625
-
 Official implementation of the SRL framework for agile jumping control of legged robots.
 
 <p align="center">
