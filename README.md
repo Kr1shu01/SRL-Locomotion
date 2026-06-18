@@ -1,10 +1,10 @@
 # **SRL: Combining SLIP Model and Reinforcement Learning for Agile Robotic Jumping**
 
-[![Paper](https://img.shields.io/badge/Paper-arXiv-orange)](#)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](#)
+[![arXiv](https://img.shields.io/badge/arXiv-2606.18625-b31b1b.svg)](https://arxiv.org/abs/2606.18625)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://chatgpt.com/c/LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://chatgpt.com/c/6a333a3c-46cc-83ee-a2c8-a432c5aa0b2e#)
 
-*arXiv submission under review. The arXiv identifier will be updated upon announcement.*
+📄 **Paper:** https://arxiv.org/abs/2606.18625
 
 Official implementation of the SRL framework for agile jumping control of legged robots.
 
@@ -149,18 +149,18 @@ python mujoco/sim2sim_mujoco.py
 
 # 🎥 Demonstration Videos
 
-## Quadruped (Go2)
+### Quadruped (Go2)
 
 - Go2_F.mp4 — Fixed-distance jumping
 - Go2_R.mp4 — Random-distance jumping
 - Go2_B.mp4 — Box-jumping
 
-## Biped (X02-lite)
+### Biped (X02-lite)
 
 - X02_F.mp4 — Fixed-distance jumping
 - X02_R.mp4 — Random-distance jumping
 
-## Framework Overview
+### Framework Overview
 
 - SRL.mp4 — Overview and experimental demonstrations
 
@@ -186,13 +186,15 @@ For complete implementation details, please refer to the accompanying paper.
 
 # 📄 Citation
 
-If you find this work useful in your research, please cite:
+If you find this repository useful in your research, please consider citing our paper:
 
 ```bibtex
 @article{hu2026srl,
-title={SRL: Combining SLIP Model and Reinforcement Learning for Agile Robotic Jumping},
-author={Hu, Xiaowen and Ye, Linqi and Zhu, Yudi and Shao, Chenyue and Li, Rankun and Li, Qingdu and Peng, Yan},
-year={2026}
+  title={SRL: Combining SLIP Model and Reinforcement Learning for Agile Robotic Jumping},
+  author={Hu, Xiaowen and Ye, Linqi and Zhu, Yudi and Shao, Chenyue and Li, Rankun and Li, Qingdu and Peng, Yan},
+  journal={arXiv preprint arXiv:2606.18625},
+  year={2026},
+  doi={10.48550/arXiv.2606.18625}
 }
 ```
 
