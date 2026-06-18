@@ -30,8 +30,7 @@ Overview of the SRL control framework for robot jumping tasks, integrating the S
 - Demonstration Videos
 - Notes
 - Citation
-- License
-- Acknowledgements
+- License & Acknowledgements
 
 ------
 
@@ -198,23 +197,8 @@ If you find this repository useful in your research, please consider citing our 
 
 ------
 
-# 📜 License
+# 📜 License & Acknowledgements
 
 This project is released under the MIT License.
 
-See LICENSE for details.
-
-------
-
-# 🙏 Acknowledgements
-
-This work was conducted at Shanghai University.
-
-The implementation builds upon several excellent open-source projects, including:
-
-- Humanoid-gym
-- RSL-RL
-- MuJoCo
-- Unity Robotics
-
-We sincerely thank the open-source robotics community for making legged locomotion research more accessible and reproducible.
+This work was developed at Shanghai University and builds upon several outstanding open-source projects, including Humanoid-gym, RSL-RL, MuJoCo, and Unity Robotics. We gratefully acknowledge the developers and maintainers of these projects for their valuable contributions.
